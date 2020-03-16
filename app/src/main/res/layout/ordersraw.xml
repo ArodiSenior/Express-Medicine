@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_rowWeight="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:cardElevation="1dp"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+            <TextView
+                android:textAlignment="textStart"
+                android:text="Order Id"
+                android:textColor="#000"
+                android:gravity="start"
+                android:id="@+id/OrderItemId"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textAlignment="textStart"
+                android:text="OrderStatus"
+                android:id="@+id/OrderItemStatus"
+                android:layout_below="@+id/OrderItemId"
+                android:textColor="#000"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="start"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textAlignment="textStart"
+                android:text="Phone"
+                android:id="@+id/OrderItemPhone"
+                android:layout_below="@+id/OrderItemStatus"
+                android:textColor="#000"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="start"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textAlignment="textStart"
+                android:text="Address"
+                android:id="@+id/OrderItemAddress"
+                android:layout_below="@+id/OrderItemPhone"
+                android:textColor="#000"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="start"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

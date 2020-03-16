@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/Maintoolbar"
+        android:elevation="0dp"
+        app:title="Express Medicine"
+        app:titleTextColor="@color/white"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        app:navigationIcon="@drawable/ic_sort"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Maintoolbar"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="30dp">
+
+        <include layout="@layout/backdrop" />
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/FrameLayout"
+        android:layout_width="match_parent"
+        android:layout_margin="0dp"
+        android:layout_below="@+id/Maintoolbar"
+        android:layout_above="@+id/bottom_navigation"
+        android:background="@drawable/background"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"
+        android:fitsSystemWindows="true"
+        app:labelVisibilityMode="labeled"
+        app:itemBackground="@color/gray"
+        app:itemIconTint="@android:color/background_dark"
+        app:itemTextColor="@android:color/background_dark" />
+
+</RelativeLayout>

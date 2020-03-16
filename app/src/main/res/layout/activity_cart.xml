@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    tools:context=".activities.Cart">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/CartToolbar"
+        app:title="Cart"
+        android:theme="@style/myToolbarTheme"
+        app:titleTextColor="@color/white"
+        android:background="@color/colorPrimary">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/CartToolbar"
+        android:background="@drawable/background"
+        android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ListCartRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/textTotal"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:text="Total:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/TotalCartPrice"
+                android:layout_toEndOf="@+id/textTotal"
+                android:textSize="20sp"
+                android:layout_height="wrap_content"
+                android:text="10 000"/>
+
+
+        </RelativeLayout>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/PlaceOrderButton"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:text="PROCEED TO CHECKOUT"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

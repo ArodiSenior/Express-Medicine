@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    tools:context="com.techsavanna.medicine.activities.SubmitActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/CheckToolbar"
+            android:theme="@style/myToolbarTheme"
+            app:titleTextColor="@color/white"
+            app:title="Shipping Details"
+            android:background="@color/colorPrimary">
+        </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/background"
+        android:layout_below="@+id/CheckToolbar"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/linear"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/back"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_search_black_24dp"
+                android:layout_height="wrap_content"/>
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:id="@+id/input_search"
+                android:background="@null"
+                android:hint="Enter Destination Address"
+                android:imeOptions="actionSearch"/>
+<!--            <fragment-->
+<!--                android:id="@+id/autocomplete_fragment"-->
+<!--                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+<!--            </fragment>-->
+
+        </LinearLayout>
+
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        android:layout_below="@+id/linear"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:id="@+id/PlaceOrder"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:text="place order"
+        android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

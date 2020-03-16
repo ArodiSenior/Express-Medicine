@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#d67601"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".activities.Register">
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="80dp"
+                android:background="#fff"
+                android:layout_marginBottom="10dp"
+                android:elevation="4dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:paddingTop="45dp">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="REGISTER HERE"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:textSize="26sp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        app:errorEnabled="true"
+                        style="@style/TextInputLayout"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="fill_parent"
+                            android:id="@+id/RegisterEmail"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:hint="Email Address"
+                            android:inputType="textEmailAddress" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        app:errorEnabled="true"
+                        style="@style/TextInputLayout"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="fill_parent"
+                            android:id="@+id/RegisterPhone"
+                            android:layout_height="wrap_content"
+                            android:hint="Phone Number"
+                            android:inputType="phone" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                       app:errorEnabled="true"
+                        app:counterMaxLength="15"
+                        style="@style/TextInputLayout"
+                        app:passwordToggleEnabled="true"
+                        app:counterEnabled="true"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:id="@+id/RegisterPassword"
+                            android:hint="Password"
+                            android:inputType="textPassword" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        app:errorEnabled="true"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="15"
+                        style="@style/TextInputLayout"
+                        app:passwordToggleEnabled="true"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="fill_parent"
+                            android:id="@+id/RegisterConfirm"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:hint="Confirm Password"
+                            android:inputType="textPassword" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RegisterButton"
+                        android:text="REGISTER"
+                        android:padding="10dp"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingTop="5dp"
+                        android:id="@+id/LoginHere"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:textSize="15sp"
+                        android:text="Already registered? Login Here" />
+
+
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressbarRegister"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/profile"
+                app:srcCompat="@drawable/image"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:elevation="4dp" />
+
+
+        </RelativeLayout>
+    </ScrollView>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AdminAdd">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:shadowDx="1"
+                    android:layout_marginTop="10dp"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:text="Create Item"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:id="@+id/PicImage"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/ic_add_a_photo_black_24dp"
+                        android:layout_height="120dp" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/ItemName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:hint="Item name"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/ItemPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:hint="Item Price"
+                            android:inputType="number" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/ItemDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:hint="Description"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <Spinner
+                        android:id="@+id/Category"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="30dp"
+                        android:layout_height="wrap_content">
+
+                    </Spinner>
+
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/AddItemButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/button"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:text="Add"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressbarAdminAdd"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:layout_width="70dp"
+                android:layout_height="70dp" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
